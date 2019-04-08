@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>NGU</title>
+	<script>$ = function() { return { ready: $ }; };</script>
+	<script src="NGU.js"></script>
+</head>
+<body>
+	<form id="NGU">
+		Format: Name,Type,eCap,mCap,ePow,mPow;next
+		<br>
+		Types: Head,Chest,Legs,Boots,Weapon
+		<br>
+		<textarea id="genNGUinput" rows="4" cols="50" onClick="this.setSelectionRange(0, this.value.length)">paste stuff here</textarea>
+		<div><button type="button" id="genNGUbutton" title="Generate Set">Generate Set</button></div>
+	</form>
+	<div id="NGUset"></div>
+</body></html>

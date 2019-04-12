@@ -1,0 +1,13 @@
+Slimy,Head,100,100,0,0,0;
+Slimy,Chest,0,0,1000,1000,0;
+Slimy,Legs,0,0,1000,1000,0;
+Slimy,Boots,0,0,1000,1000,0;
+Slimy,Weapon,0,0,1000,1000,0;
+Stealthy,Head,0,0,1000,1000,0;
+Stealthy,Chest,0,0,0,0,0;
+Stealthy,Legs,0,0,0,0,0;
+Stealthy,Boots,0,0,0,0,0;
+Stealthy,Weapon,0,0,0,0,0;
+Acc1,Acc,100,0,0,0,0;
+Acc2,Acc,0,100,0,0,0;
+Acc3,Acc,0,0,100,0,0;

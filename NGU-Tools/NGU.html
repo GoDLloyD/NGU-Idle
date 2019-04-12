@@ -6,11 +6,13 @@
 </head>
 <body>
 	<form id="NGU">
-		Format: Name,Type,eCap,mCap,ePow,mPow;next
+		Format: Name,Type,eCap,mCap,ePow,mPow,NGU speed;next
 		<br>
-		Types: Head,Chest,Legs,Boots,Weapon
+		Types: Head,Chest,Legs,Boots,Weapon,Acc
 		<br>
 		<textarea id="genNGUinput" rows="4" cols="50" onClick="this.setSelectionRange(0, this.value.length)">paste stuff here</textarea>
+		<br>
+		Accessory Slots: <input type="text" id="slotsInput" value="0"></input>
 		<div><button type="button" id="genNGUbutton" title="Generate Set">Generate Set</button></div>
 	</form>
 	<div id="NGUset"></div>

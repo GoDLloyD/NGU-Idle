@@ -19,6 +19,30 @@ document.addEventListener("DOMContentLoaded", function() {
 		this.mCap = 0;
 		this.ePow = 0;
 		this.mPow = 0;
+		this.ngu = 0;
+	}
+	
+	function getCombinations(inputs, steps) {
+		var combinations = [];
+		for(var index = 0; index < inputs.length; index++) {
+			var array = [];
+			createCombinations(combinations, array, 0, inputs, index, steps)
+		}
+		return combinations;
+	}
+	
+	function createCombinations(combinations, array, arrayIndex, inputs, inputsIndex, steps) {
+		if(array.includes(inputs[inputsIndex])) {
+			return;
+		}
+		array[arrayIndex] = inputs[inputsIndex];
+		if(arrayIndex < (steps-1)) {
+			for(var index = 0; index < inputs.length; index++) {
+				createCombinations(combinations, array, arrayIndex+1, inputs, index, steps);
+			}
+		} else {
+			combinations.push(array);
+		}
 	}
 	
 	function generateNGUset() {
@@ -27,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		var bestLegs = new EquipItem("Legs");
 		var bestBoots = new EquipItem("Boots");
 		var bestWeapon = new EquipItem("Weapon");
+		var bestAccessories = [];
+		var accSlots = document.getElementById("slotsInput").value;
 		
 		var generationText = document.getElementById("genNGUinput").value;
 		var generationTextParts = generationText.split(";");
@@ -36,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		var equipLegs = [];
 		var equipBoots = [];
 		var equipWeapons = [];
+		var equipAccessories = [];
+		
 		generationTextParts.map(function(generationTextPart) {
 			var generationTextStats = generationTextPart.split(",");
 			var equipPart = new EquipItem(generationTextStats[1]);
@@ -44,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			equipPart.mCap = (generationTextStats[3]/100);
 			equipPart.ePow = (generationTextStats[4]/100);
 			equipPart.mPow = (generationTextStats[5]/100);
+			equipPart.ngu = (generationTextStats[6]/100);
 			if(equipPart.type == "Head") {
 					equipHeads.push(equipPart);
 			} else if(equipPart.type == "Chest") {
@@ -54,111 +83,99 @@ document.addEventListener("DOMContentLoaded", function() {
 					equipBoots.push(equipPart);
 			} else if(equipPart.type == "Weapon") {
 					equipWeapons.push(equipPart);
+			} else if(equipPart.type == "Acc") {
+					equipAccessories.push(equipPart);
 			}
 		});
-		equipParts.push(equipHeads);
-		equipParts.push(equipChests);
-		equipParts.push(equipLegs);
-		equipParts.push(equipBoots);
-		equipParts.push(equipWeapons);
-		equipParts.map(function(equipPart) {
-			equipPart.map(function(equip) {
-				var calcECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap;
-				var calcMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap;
-				var calcEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow;
-				var calcMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow;
-				var calcBestECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap;
-				var calcBestMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap;
-				var calcBestEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow;
-				var calcBestMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow;
-				var calcBestStats = calcBestECap * calcBestMCap * calcBestEPow * calcBestMPow;
-				
-				if(equip.type == "Head") {
-					calcECap = calcECap - bestHead.eCap + equip.eCap;
-					calcMCap = calcMCap - bestHead.mCap + equip.mCap;
-					calcEPow = calcEPow - bestHead.ePow + equip.ePow;
-					calcMPow = calcMPow - bestHead.mPow + equip.mPow;
-					var calcStats = calcECap * calcMCap * calcEPow * calcMPow;
-					if(calcStats > calcBestStats)
-					{
-						bestHead.name = equip.name;
-						bestHead.eCap = equip.eCap;
-						bestHead.mCap = equip.mCap;
-						bestHead.ePow = equip.ePow;
-						bestHead.mPow = equip.mPow;
-					}
-				} else if(equip.type == "Chest") {
-					calcECap = calcECap - bestChest.eCap + equip.eCap;
-					calcMCap = calcMCap - bestChest.mCap + equip.mCap;
-					calcEPow = calcEPow - bestChest.ePow + equip.ePow;
-					calcMPow = calcMPow - bestChest.mPow + equip.mPow;
-					var calcStats = calcECap * calcMCap * calcEPow * calcMPow;
-					if(calcStats > calcBestStats)
-					{
-						bestChest.name = equip.name;
-						bestChest.eCap = equip.eCap;
-						bestChest.mCap = equip.mCap;
-						bestChest.ePow = equip.ePow;
-						bestChest.mPow = equip.mPow;
-					}
-				} else if(equip.type == "Legs") {
-					calcECap = calcECap - bestLegs.eCap + equip.eCap;
-					calcMCap = calcMCap - bestLegs.mCap + equip.mCap;
-					calcEPow = calcEPow - bestLegs.ePow + equip.ePow;
-					calcMPow = calcMPow - bestLegs.mPow + equip.mPow;
-					var calcStats = calcECap * calcMCap * calcEPow * calcMPow;
-					if(calcStats > calcBestStats)
-					{
-						bestLegs.name = equip.name;
-						bestLegs.eCap = equip.eCap;
-						bestLegs.mCap = equip.mCap;
-						bestLegs.ePow = equip.ePow;
-						bestLegs.mPow = equip.mPow;
-					}
-				} else if(equip.type == "Boots") {
-					calcECap = calcECap - bestBoots.eCap + equip.eCap;
-					calcMCap = calcMCap - bestBoots.mCap + equip.mCap;
-					calcEPow = calcEPow - bestBoots.ePow + equip.ePow;
-					calcMPow = calcMPow - bestBoots.mPow + equip.mPow;
-					var calcStats = calcECap * calcMCap * calcEPow * calcMPow;
-					if(calcStats > calcBestStats)
-					{
-						bestBoots.name = equip.name;
-						bestBoots.eCap = equip.eCap;
-						bestBoots.mCap = equip.mCap;
-						bestBoots.ePow = equip.ePow;
-						bestBoots.mPow = equip.mPow;
-					}
-				} else if(equip.type == "Weapon") {
-					calcECap = calcECap - bestWeapon.eCap + equip.eCap;
-					calcMCap = calcMCap - bestWeapon.mCap + equip.mCap;
-					calcEPow = calcEPow - bestWeapon.ePow + equip.ePow;
-					calcMPow = calcMPow - bestWeapon.mPow + equip.mPow;
-					var calcStats = calcECap * calcMCap * calcEPow * calcMPow;
-					if(calcStats > calcBestStats)
-					{
-						bestWeapon.name = equip.name;
-						bestWeapon.eCap = equip.eCap;
-						bestWeapon.mCap = equip.mCap;
-						bestWeapon.ePow = equip.ePow;
-						bestWeapon.mPow = equip.mPow;
-					}
-				}
+		
+		if(accSlots >= equipAccessories.length) {
+			var combinations = [];
+			combinations.push(equipAccessories);
+		} else if(accSlots < 1) {
+			var combinations = [];
+			var emptyArray = [];
+			combinations.push(emptyArray);
+		} else {
+			var combinations = getCombinations(equipAccessories, accSlots);
+		}
+		equipHeads.map(function(currentHead) {
+			equipChests.map(function(currentChest) {
+				equipLegs.map(function(currentLegs) {
+					equipBoots.map(function(currentBoots) {
+						equipWeapons.map(function(currentWeapon) {
+							combinations.map(function(currentCombination) {
+								var calcECap = 1 + currentHead.eCap + currentChest.eCap + currentLegs.eCap + currentBoots.eCap + currentWeapon.eCap;
+								var calcMCap = 1 + currentHead.mCap + currentChest.mCap + currentLegs.mCap + currentBoots.mCap + currentWeapon.mCap;
+								var calcEPow = 1 + currentHead.ePow + currentChest.ePow + currentLegs.ePow + currentBoots.ePow + currentWeapon.ePow;
+								var calcMPow = 1 + currentHead.mPow + currentChest.mPow + currentLegs.mPow + currentBoots.mPow + currentWeapon.mPow;
+								var calcNgu = 1 + currentHead.ngu + currentChest.ngu + currentLegs.ngu + currentBoots.ngu + currentWeapon.ngu;
+								for(var index = 0; index < currentCombination.length; index++) {
+									calcECap += currentCombination[index].eCap
+									calcMCap += currentCombination[index].mCap
+									calcEPow += currentCombination[index].ePow
+									calcMPow += currentCombination[index].mPow
+									calcNgu += currentCombination[index].ngu
+								}
+								var calcEStats = calcECap * calcEPow * calcNgu;
+								var calcMStats = calcMCap * calcMPow * calcNgu;
+								var calcStats = calcEStats * calcMStats;
+								
+								var calcBestECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap;
+								var calcBestMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap;
+								var calcBestEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow;
+								var calcBestMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow;
+								var calcBestNgu = 1 + bestHead.ngu + bestChest.ngu + bestLegs.ngu + bestBoots.ngu + bestWeapon.ngu;
+								for(var index = 0; index < bestAccessories.length; index++) {
+									calcBestECap += bestAccessories[index].eCap
+									calcBestMCap += bestAccessories[index].mCap
+									calcBestEPow += bestAccessories[index].ePow
+									calcBestMPow += bestAccessories[index].mPow
+									calcBestNgu += bestAccessories[index].ngu
+								}
+								var calcBestEStats = calcBestECap * calcBestEPow * calcBestNgu;
+								var calcBestMStats = calcBestMCap * calcBestMPow * calcBestNgu;
+								var calcBestStats = calcBestEStats * calcBestMStats;
+								
+								if(calcStats > calcBestStats) {
+									bestHead = currentHead;
+									bestChest = currentChest;
+									bestLegs = currentLegs;
+									bestBoots = currentBoots;
+									bestWeapon = currentWeapon;
+									bestAccessories = currentCombination;
+								}
+							});
+						});
+					});
+				});
 			});
 		});
+		
 		var calcBestECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap;
 		var calcBestMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap;
 		var calcBestEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow;
 		var calcBestMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow;
-		var calcBestEStats = calcBestECap * calcBestEPow;
-		var calcBestMStats = calcBestMCap * calcBestMPow;
-		var calcBestStats = calcBestECap * calcBestMCap * calcBestEPow * calcBestMPow;
-		document.getElementById("NGUset").innerHTML = bestHead.name + "<br>"
+		var calcBestNgu = 1 + bestHead.ngu + bestChest.ngu + bestLegs.ngu + bestBoots.ngu + bestWeapon.ngu;
+		for(var index = 0; index < bestAccessories.length; index++) {
+			calcBestECap += bestAccessories[index].eCap
+			calcBestMCap += bestAccessories[index].mCap
+			calcBestEPow += bestAccessories[index].ePow
+			calcBestMPow += bestAccessories[index].mPow
+			calcBestNgu += bestAccessories[index].ngu
+		}
+		var calcBestEStats = calcBestECap * calcBestEPow * calcBestNgu;
+		var calcBestMStats = calcBestMCap * calcBestMPow * calcBestNgu;
+		var calcBestStats = calcBestEStats * calcBestMStats;
+		var nguSetDiv = document.getElementById("NGUset");
+		nguSetDiv.innerHTML = bestHead.name + "<br>"
 			+ bestChest.name + "<br>"
 			+ bestLegs.name + "<br>"
 			+ bestBoots.name + "<br>"
-			+ bestWeapon.name + "<br>"
-			+ "Energy NGU Mult: " + calcBestEStats + "x" + "<br>"
+			+ bestWeapon.name + "<br>";
+		for(var index = 0; index < bestAccessories.length; index++) {
+			nguSetDiv.innerHTML += bestAccessories[index].name + "<br>";
+		}
+		nguSetDiv.innerHTML += "Energy NGU Mult: " + calcBestEStats + "x" + "<br>"
 			+ "Magic NGU Mult: " + calcBestMStats + "x" + "<br>"
 			+ "Total Mult: " + calcBestStats + "x";
 	}

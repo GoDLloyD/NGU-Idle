@@ -167,13 +167,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		var calcBestMStats = calcBestMCap * calcBestMPow * calcBestNgu;
 		var calcBestStats = calcBestEStats * calcBestMStats;
 		var nguSetDiv = document.getElementById("NGUset");
-		nguSetDiv.innerHTML = bestHead.name + "<br>"
-			+ bestChest.name + "<br>"
-			+ bestLegs.name + "<br>"
-			+ bestBoots.name + "<br>"
-			+ bestWeapon.name + "<br>";
+		nguSetDiv.innerHTML = bestHead.name + " " + bestHead.type + "<br>"
+			+ bestChest.name + " " + bestChest.type + "<br>"
+			+ bestLegs.name + " " + bestLegs.type + "<br>"
+			+ bestBoots.name + " " + bestBoots.type + "<br>"
+			+ bestWeapon.name + " " + bestWeapon.type + "<br>";
 		for(var index = 0; index < bestAccessories.length; index++) {
-			nguSetDiv.innerHTML += bestAccessories[index].name + "<br>";
+			nguSetDiv.innerHTML += bestAccessories[index].name + " " + bestAccessories[index].type + "<br>";
 		}
 		nguSetDiv.innerHTML += "Energy NGU Mult: " + calcBestEStats + "x" + "<br>"
 			+ "Magic NGU Mult: " + calcBestMStats + "x" + "<br>"

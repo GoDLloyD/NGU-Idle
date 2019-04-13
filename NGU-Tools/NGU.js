@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				createCombinations(combinations, array, arrayIndex+1, inputs, index, steps);
 			}
 		} else {
-			combinations.push(array);
+			combinations.push(array.slice(0));
 		}
 	}
 	

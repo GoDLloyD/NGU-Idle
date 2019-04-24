@@ -46,11 +46,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	
 	function generateNGUset() {
-		var eCapBase = document.getElementById("eCapBase").value;
-		var mCapBase = document.getElementById("mCapBase").value;
-		var ePowBase = document.getElementById("ePowBase").value;
-		var mPowBase = document.getElementById("mPowBase").value;
-		var nguBase = document.getElementById("nguBase").value;
+		var eCapBase = document.getElementById("eCapBase").value/100;
+		var mCapBase = document.getElementById("mCapBase").value/100;
+		var ePowBase = document.getElementById("ePowBase").value/100;
+		var mPowBase = document.getElementById("mPowBase").value/100;
+		var nguBase = document.getElementById("nguBase").value/100;
 		
 		var bestHead = new EquipItem("Head");
 		var bestChest = new EquipItem("Chest");

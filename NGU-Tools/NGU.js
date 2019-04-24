@@ -46,6 +46,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	
 	function generateNGUset() {
+		var eCapBase = document.getElementById("eCapBase").value;
+		var mCapBase = document.getElementById("mCapBase").value;
+		var ePowBase = document.getElementById("ePowBase").value;
+		var mPowBase = document.getElementById("mPowBase").value;
+		var nguBase = document.getElementById("nguBase").value;
+		
 		var bestHead = new EquipItem("Head");
 		var bestChest = new EquipItem("Chest");
 		var bestLegs = new EquipItem("Legs");
@@ -104,11 +110,11 @@ document.addEventListener("DOMContentLoaded", function() {
 					equipBoots.map(function(currentBoots) {
 						equipWeapons.map(function(currentWeapon) {
 							combinations.map(function(currentCombination) {
-								var calcECap = 1 + currentHead.eCap + currentChest.eCap + currentLegs.eCap + currentBoots.eCap + currentWeapon.eCap;
-								var calcMCap = 1 + currentHead.mCap + currentChest.mCap + currentLegs.mCap + currentBoots.mCap + currentWeapon.mCap;
-								var calcEPow = 1 + currentHead.ePow + currentChest.ePow + currentLegs.ePow + currentBoots.ePow + currentWeapon.ePow;
-								var calcMPow = 1 + currentHead.mPow + currentChest.mPow + currentLegs.mPow + currentBoots.mPow + currentWeapon.mPow;
-								var calcNgu = 1 + currentHead.ngu + currentChest.ngu + currentLegs.ngu + currentBoots.ngu + currentWeapon.ngu;
+								var calcECap = 1 + currentHead.eCap + currentChest.eCap + currentLegs.eCap + currentBoots.eCap + currentWeapon.eCap + eCapBase;
+								var calcMCap = 1 + currentHead.mCap + currentChest.mCap + currentLegs.mCap + currentBoots.mCap + currentWeapon.mCap + mCapBase;
+								var calcEPow = 1 + currentHead.ePow + currentChest.ePow + currentLegs.ePow + currentBoots.ePow + currentWeapon.ePow + ePowBase;
+								var calcMPow = 1 + currentHead.mPow + currentChest.mPow + currentLegs.mPow + currentBoots.mPow + currentWeapon.mPow + mPowBase;
+								var calcNgu = 1 + currentHead.ngu + currentChest.ngu + currentLegs.ngu + currentBoots.ngu + currentWeapon.ngu + nguBase;
 								for(var index = 0; index < currentCombination.length; index++) {
 									calcECap += currentCombination[index].eCap
 									calcMCap += currentCombination[index].mCap
@@ -120,11 +126,11 @@ document.addEventListener("DOMContentLoaded", function() {
 								var calcMStats = calcMCap * calcMPow * calcNgu;
 								var calcStats = calcEStats * calcMStats;
 								
-								var calcBestECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap;
-								var calcBestMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap;
-								var calcBestEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow;
-								var calcBestMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow;
-								var calcBestNgu = 1 + bestHead.ngu + bestChest.ngu + bestLegs.ngu + bestBoots.ngu + bestWeapon.ngu;
+								var calcBestECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap + eCapBase;
+								var calcBestMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap + mCapBase;
+								var calcBestEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow + ePowBase;
+								var calcBestMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow + mPowBase;
+								var calcBestNgu = 1 + bestHead.ngu + bestChest.ngu + bestLegs.ngu + bestBoots.ngu + bestWeapon.ngu + nguBase;
 								for(var index = 0; index < bestAccessories.length; index++) {
 									calcBestECap += bestAccessories[index].eCap
 									calcBestMCap += bestAccessories[index].mCap
@@ -151,11 +157,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		});
 		
-		var calcBestECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap;
-		var calcBestMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap;
-		var calcBestEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow;
-		var calcBestMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow;
-		var calcBestNgu = 1 + bestHead.ngu + bestChest.ngu + bestLegs.ngu + bestBoots.ngu + bestWeapon.ngu;
+		var calcBestECap = 1 + bestHead.eCap + bestChest.eCap + bestLegs.eCap + bestBoots.eCap + bestWeapon.eCap + eCapBase;
+		var calcBestMCap = 1 + bestHead.mCap + bestChest.mCap + bestLegs.mCap + bestBoots.mCap + bestWeapon.mCap + mCapBase;
+		var calcBestEPow = 1 + bestHead.ePow + bestChest.ePow + bestLegs.ePow + bestBoots.ePow + bestWeapon.ePow + ePowBase;
+		var calcBestMPow = 1 + bestHead.mPow + bestChest.mPow + bestLegs.mPow + bestBoots.mPow + bestWeapon.mPow + mPowBase;
+		var calcBestNgu = 1 + bestHead.ngu + bestChest.ngu + bestLegs.ngu + bestBoots.ngu + bestWeapon.ngu + nguBase;
 		for(var index = 0; index < bestAccessories.length; index++) {
 			calcBestECap += bestAccessories[index].eCap
 			calcBestMCap += bestAccessories[index].mCap

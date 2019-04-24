@@ -181,9 +181,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		for(var index = 0; index < bestAccessories.length; index++) {
 			nguSetDiv.innerHTML += bestAccessories[index].name + " " + bestAccessories[index].type + "<br>";
 		}
-		nguSetDiv.innerHTML += "Energy NGU Mult: " + calcBestEStats + "x" + "<br>"
-			+ "Magic NGU Mult: " + calcBestMStats + "x" + "<br>"
-			+ "Total Mult: " + calcBestStats + "x";
+		nguSetDiv.innerHTML += "Energy NGU Mult: " + calcBestEStats.toExponential(3) + "x" + "<br>"
+			+ "Magic NGU Mult: " + calcBestMStats.toExponential(3) + "x" + "<br>"
+			+ "Total Mult: " + calcBestStats.toExponential(3) + "x";
 	}
 	
 	document.getElementById("genNGUbutton").onclick = function(){

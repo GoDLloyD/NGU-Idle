@@ -6,35 +6,75 @@
 </head>
 <body>
 	<form id="NGU">
-		Fixed eCap Bonus%: <input type="text" id="eCapBase" value="0"></input>
+		<div>
+			<h3>Fixed Bonuses</h3>
+			<table>
+			<tr>
+				<td>
+					Fixed eCap Bonus%:
+				</td>
+				<td>
+					<input type="text" id="eCapBase" value="0"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Fixed mCap Bonus%:
+				</td>
+				<td>
+					<input type="text" id="mCapBase" value="0"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Fixed ePow Bonus%:
+				</td>
+				<td>
+					<input type="text" id="ePowBase" value="0"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Fixed mPow Bonus%:
+				</td>
+				<td>
+					<input type="text" id="mPowBase" value="0"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Fixed NGU Bonus%:
+				</td>
+				<td>
+					<input type="text" id="nguBase" value="0"></input>
+				</td>
+			</tr>
+			</table>
+		</div>
 		<br>
-		Fixed mCap Bonus%: <input type="text" id="mCapBase" value="0"></input>
-		<br>
-		Fixed ePow Bonus%: <input type="text" id="ePowBase" value="0"></input>
-		<br>
-		Fixed mPow Bonus%: <input type="text" id="mPowBase" value="0"></input>
-		<br>
-		Fixed NGU Bonus%: <input type="text" id="nguBase" value="0"></input>
-		<br>
-		<textarea id="genNGUinput" rows="4" cols="50">paste stuff here</textarea>
-		<br>
-		Accessory Slots: <input type="text" id="slotsInput" value="0"></input>
-		<div><button type="button" id="genNGUbutton" title="Generate Set">Generate Set</button></div>
+		<div>
+			<h3>Equipment</h3>
+			<textarea id="genNGUinput" rows="4" cols="50">paste stuff here</textarea>
+			<br>
+			Accessory Slots: <input type="text" id="slotsInput" value="0"></input>
+			<div><button type="button" id="genNGUbutton" title="Generate Set">Generate Set</button></div>
+		</div>
 	</form>
 	<div id="NGUset"></div>
 	<br><br><br>
+	<h4>Explanation</h4>
 	Enter your equipment % stats in the following Format: Name,Type,eCap,mCap,ePow,mPow,NGU speed;next
 	<br>
 	Use the following Types: Head,Chest,Legs,Boots,Weapon,Acc
 	<br>
 	Enter the % bonuses of gear you don't want to include in the optimization progress, for example:
 	<br>
-	If you want to always wear Jakes Stapler, don't enter its values in the "Paste stuff here" box and instead enter its bonus in the Fixed Bonus% section. (60% eCap at lvl 100 -> enter "60" in "Fixed eCap Bonus%")
+	If you want to always wear Jakes Stapler, don't enter its values in the "Paste stuff here" box and instead enter its bonus in the Fixed Bonuses section. (60% eCap at lvl 100 -> enter "60" in "Fixed eCap Bonus%")
 	<br>
 	PS: You can choose "Name"
 	<br>
 	<br>
-	Example Text:
+	Example Equipment input:
 	<br>
 	Chocolate,Weapon,0,580,6000,0,0;<br>
 	Chocolate,Head,0,380,5200,0,0;<br>

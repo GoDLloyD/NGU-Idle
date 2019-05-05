@@ -201,17 +201,6 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/e/e5/148_-_A
 
 itemList.push(item);
 
-var item = new CreateItem('Blue Heart', Slot.ACCESSORY);
-item.ngu = 80;
-item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/5/5c/196_-_My_Blue_Heart.png/';
-
-itemList.push(item);
-
-var item = new CreateItem('Green Heart', Slot.ACCESSORY);
-item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/14/171_-_My_Green_Heart.png/';
-
-itemList.push(item);
-
 var item = new CreateItem('Red Heart', Slot.ACCESSORY);
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/d/d8/119_-_My_Red_Heart.png/';
 
@@ -222,8 +211,36 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/8/81/129_-_M
 
 itemList.push(item);
 
+var item = new CreateItem('Brown Heart', Slot.ACCESSORY);
+item.ePow = 100;
+item.mPow = 100;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/b/b4/162_-_My_Brown_Heart.png/revision/latest?cb=20180706092359';
+
+itemList.push(item);
+
+var item = new CreateItem('Green Heart', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/14/171_-_My_Green_Heart.png/';
+
+itemList.push(item);
+
+var item = new CreateItem('Blue Heart', Slot.ACCESSORY);
+item.ngu = 80;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/5/5c/196_-_My_Blue_Heart.png/';
+
+itemList.push(item);
+
+var item = new CreateItem('Purple Heart', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/9/9c/212_-_My_Purple_Heart.png/revision/latest?cb=20181031190629';
+
+itemList.push(item);
+
 var item = new CreateItem('Orange Heart', Slot.ACCESSORY);
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/0/00/293_-_My_Orange_Heart.png';
+
+itemList.push(item);
+
+var item = new CreateItem('Grey Heart', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/2/24/297_-_My_Grey_Heart.png/revision/latest?cb=20190411171956';
 
 itemList.push(item);
 
@@ -1459,5 +1476,17 @@ var item = new CreateItem('Right Fairy Wing', Slot.ACCESSORY);
 item.mPow = 66000;
 item.mCap = 6600;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/6/66/277_-_Right_Fairy_Wing.png/revision/latest?cb=20190405171006';
+
+itemList.push(item);
+
+var item = new CreateItem('Ascended x6 Pendant', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/3/34/295_-_Ascended_x6_Pendant.png/revision/latest?cb=20190409190045';
+
+itemList.push(item);
+
+var item = new CreateItem('GALACTIC HERALD LOOTY', Slot.ACCESSORY);
+item.ePow = 50000;
+item.mPow = 50000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/d/d7/296_-_GALACTIC_HERALD_LOOTY.png/revision/latest?cb=20190411171936';
 
 itemList.push(item);

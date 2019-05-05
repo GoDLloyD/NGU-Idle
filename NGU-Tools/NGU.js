@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		this.ngu = 0;
 	}
 	
-	function getCombinations(inputs, steps) {
+	/*function getCombinations(inputs, steps) {
 		var combinations = [];
 		for(var index = 0; index < inputs.length; index++) {
 			var array = [];
@@ -44,7 +44,23 @@ document.addEventListener("DOMContentLoaded", function() {
 		} else {
 			combinations.push(array.slice(0));
 		}
-	}
+	}*/
+	
+	function getCombinations(inputs, steps) {
+        return createCombinations([], [], 0, inputs, 0, steps);
+    }
+    
+    function createCombinations(combinations, array, arrayIndex, inputs, inputsIndex, steps) {
+        if(arrayIndex < steps) {
+            for(var index = inputsIndex; index < inputs.length; index++) {
+                array[arrayIndex] = inputs[index];
+                createCombinations(combinations, array, arrayIndex+1, inputs, index+1, steps);
+            }
+        } else {
+            combinations.push(array.slice());
+        }
+        return combinations;
+    }
 	
 	function generateNGUset() {
 		var eCapBase = document.getElementById("eCapBase").value/100;
@@ -81,17 +97,29 @@ document.addEventListener("DOMContentLoaded", function() {
 			equipPart.mPow = (generationTextStats[5]/100);
 			equipPart.ngu = (generationTextStats[6]/100);
 			if(equipPart.type == "Head") {
+				if (equipPart.eCap > 0 || equipPart.mCap > 0 || equipPart.ePow > 0 || equipPart.mPow > 0 || equipPart.ngu > 0) {
 					equipHeads.push(equipPart);
+				}
 			} else if(equipPart.type == "Chest") {
+				if (equipPart.eCap > 0 || equipPart.mCap > 0 || equipPart.ePow > 0 || equipPart.mPow > 0 || equipPart.ngu > 0) {
 					equipChests.push(equipPart);
+				}
 			} else if(equipPart.type == "Legs") {
+				if (equipPart.eCap > 0 || equipPart.mCap > 0 || equipPart.ePow > 0 || equipPart.mPow > 0 || equipPart.ngu > 0) {
 					equipLegs.push(equipPart);
+				}
 			} else if(equipPart.type == "Boots") {
+				if (equipPart.eCap > 0 || equipPart.mCap > 0 || equipPart.ePow > 0 || equipPart.mPow > 0 || equipPart.ngu > 0) {
 					equipBoots.push(equipPart);
+				}
 			} else if(equipPart.type == "Weapon") {
+				if (equipPart.eCap > 0 || equipPart.mCap > 0 || equipPart.ePow > 0 || equipPart.mPow > 0 || equipPart.ngu > 0) {
 					equipWeapons.push(equipPart);
+				}
 			} else if(equipPart.type == "Acc") {
+				if (equipPart.eCap > 0 || equipPart.mCap > 0 || equipPart.ePow > 0 || equipPart.mPow > 0 || equipPart.ngu > 0) {
 					equipAccessories.push(equipPart);
+				}
 			}
 		});
 		

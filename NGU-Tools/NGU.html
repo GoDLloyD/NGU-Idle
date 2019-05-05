@@ -1,95 +1,103 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>NGU</title>
+	<link rel="stylesheet" href="NGU.css">
 	<script>$ = function() { return { ready: $ }; };</script>
 	<script src="NGU.js"></script>
+	<script src="items.js"></script>
 </head>
 <body>
-	<form id="NGU">
-		<div>
-			<h3>Fixed Bonuses</h3>
-			<table>
-			<tr>
-				<td>
-					Fixed eCap Bonus%:
-				</td>
-				<td>
-					<input type="text" id="eCapBase" value="0"></input>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Fixed mCap Bonus%:
-				</td>
-				<td>
-					<input type="text" id="mCapBase" value="0"></input>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Fixed ePow Bonus%:
-				</td>
-				<td>
-					<input type="text" id="ePowBase" value="0"></input>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Fixed mPow Bonus%:
-				</td>
-				<td>
-					<input type="text" id="mPowBase" value="0"></input>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Fixed NGU Bonus%:
-				</td>
-				<td>
-					<input type="text" id="nguBase" value="0"></input>
-				</td>
-			</tr>
-			</table>
-		</div>
-		<br>
-		<div>
-			<h3>Equipment</h3>
-			<textarea id="genNGUinput" rows="4" cols="50">paste stuff here</textarea>
+	<table>
+	<tr><td>
+		<form id="NGU">
+			<div>
+				<h3>Fixed Bonuses</h3>
+				<table>
+				<tr>
+					<td>
+						Fixed eCap Bonus%:
+					</td>
+					<td>
+						<input type="text" id="eCapBase" value="0"></input>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Fixed mCap Bonus%:
+					</td>
+					<td>
+						<input type="text" id="mCapBase" value="0"></input>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Fixed ePow Bonus%:
+					</td>
+					<td>
+						<input type="text" id="ePowBase" value="0"></input>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Fixed mPow Bonus%:
+					</td>
+					<td>
+						<input type="text" id="mPowBase" value="0"></input>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Fixed NGU Bonus%:
+					</td>
+					<td>
+						<input type="text" id="nguBase" value="0"></input>
+					</td>
+				</tr>
+				</table>
+			</div>
 			<br>
-			Accessory Slots: <input type="text" id="slotsInput" value="0"></input>
-			<div><button type="button" id="genNGUbutton" title="Generate Set">Generate Set</button></div>
-		</div>
-	</form>
-	<div id="NGUset"></div>
-	<br><br><br>
-	<h4>Explanation</h4>
-	Enter your equipment % stats in the following Format: Name,Type,eCap,mCap,ePow,mPow,NGU speed;next
-	<br>
-	Use the following Types: Head,Chest,Legs,Boots,Weapon,Acc
-	<br>
-	Enter the % bonuses of gear you don't want to include in the optimization progress, for example:
-	<br>
-	If you want to always wear Jakes Stapler, don't enter its values in the "Paste stuff here" box and instead enter its bonus in the Fixed Bonuses section. (60% eCap at lvl 100 -> enter "60" in "Fixed eCap Bonus%")
-	<br>
-	PS: You can choose "Name"
-	<br>
-	<br>
-	Example Equipment input:
-	<br>
-	Chocolate,Weapon,0,580,6000,0,0;<br>
-	Chocolate,Head,0,380,5200,0,0;<br>
-	Chocolate,Chest,600,600,5800,5800,0;<br>
-	Chocolate,Legs,460,0,5600,5600,0;<br>
-	Chocolate,Boots,680,0,6800,0,0;<br>
-	The Stealthiest Armor,Chest,420,420,0,0,400;<br>
-	UUG's Special Ring,Acc,0,0,0,0,200;<br>
-	Fanny Pack,Acc,60,60,500,500,0;<br>
-	A Regular Tie,Acc,0,0,0,216,120;<br>
-	A Shrunken Voodoo Doll,Acc,0,0,0,0,400;<br>
-	A Power Pill,Acc,600,600,6000,6000,0;<br>
-	A Small Gerbill,Acc,0,1200,12000,12000,0;<br>
-	A Van-Gogh Painting,Acc,400,400,0,0,0;<br>
-	A Bald Egg,Acc,300,300,0,0,0;<br>
-	Dorky Glasses,Acc,0,0,0,0,300;<br>
-	Ring Of Utility,Acc,0,0,0,0,100;<br>
+			<div>
+				<h3>Equipment</h3>
+				<textarea id="genNGUinput" rows="4" cols="50">paste stuff here</textarea>
+				<br>
+				Accessory Slots: <input type="text" id="slotsInput" value="0"></input>
+				<div><button type="button" id="genNGUbutton" title="Generate Set">Generate Set</button></div>
+			</div>
+		</form>
+		<div id="NGUset"></div>
+		<br><br><br>
+		<h4>Explanation</h4>
+		Enter your equipment % stats in the following Format: Name,Type,eCap,mCap,ePow,mPow,NGU speed;next
+		<br>
+		Use the following Types: Head,Chest,Legs,Boots,Weapon,Acc
+		<br>
+		Enter the % bonuses of gear you don't want to include in the optimization progress, for example:
+		<br>
+		If you want to always wear Jakes Stapler, don't enter its values in the "Paste stuff here" box and instead enter its bonus in the Fixed Bonuses section. (60% eCap at lvl 100 -> enter "60" in "Fixed eCap Bonus%")
+		<br>
+		PS: You can choose "Name"
+		<br>
+		<br>
+		Example Equipment input:
+		<br>
+		Chocolate,Weapon,0,580,6000,0,0;<br>
+		Chocolate,Head,0,380,5200,0,0;<br>
+		Chocolate,Chest,600,600,5800,5800,0;<br>
+		Chocolate,Legs,460,0,5600,5600,0;<br>
+		Chocolate,Boots,680,0,6800,0,0;<br>
+		The Stealthiest Armor,Chest,420,420,0,0,400;<br>
+		UUG's Special Ring,Acc,0,0,0,0,200;<br>
+		Fanny Pack,Acc,60,60,500,500,0;<br>
+		A Regular Tie,Acc,0,0,0,216,120;<br>
+		A Shrunken Voodoo Doll,Acc,0,0,0,0,400;<br>
+		A Power Pill,Acc,600,600,6000,6000,0;<br>
+		A Small Gerbill,Acc,0,1200,12000,12000,0;<br>
+		A Van-Gogh Painting,Acc,400,400,0,0,0;<br>
+		A Bald Egg,Acc,300,300,0,0,0;<br>
+		Dorky Glasses,Acc,0,0,0,0,300;<br>
+		Ring Of Utility,Acc,0,0,0,0,100;<br>
+	</td>
+	<td>
+		<div id="items"></div>
+	</td></tr>
 </body></html>

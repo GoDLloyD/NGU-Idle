@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	function el(tag, contents) { var el = document.createElement(tag); if(contents) contents.map(appendTo(el)); return el; }
 	function txt() { return document.createTextNode(arr(arguments).join()); }
 	function div() { return el("div", arr(arguments)); }
+	function img() { return el("img", arr(arguments)); }
 	function span() { return el("span", arr(arguments)); }
 	function label() { return el("label", arr(arguments)); }
 	function tr() { return el("TR", arr(arguments)); }
@@ -185,6 +186,22 @@ document.addEventListener("DOMContentLoaded", function() {
 			+ "Magic NGU Mult: " + calcBestMStats.toExponential(3) + "x" + "<br>"
 			+ "Total Mult: " + calcBestStats.toExponential(3) + "x";
 	}
+	
+	function appendNguInput(inputString) {
+		document.getElementById("genNGUinput").value += inputString;
+	}
+	
+	var itemListDiv = document.getElementById("items");
+	itemList.map(function(item) {
+		var itemImg = img();
+		itemImg.src = item.img;
+		itemImg.alt = item.name;
+		itemImg.onclick = function() {
+			appendNguInput(itemInputString);
+		};
+		var itemInputString = "\n" + item.name + "," + item.type + "," + item.eCap + "," + item.mCap + "," + item.ePow + "," + item.mPow + "," + item.ngu + ";";
+		itemListDiv.appendChild(itemImg);
+	});
 	
 	document.getElementById("genNGUbutton").onclick = function(){
 		generateNGUset();

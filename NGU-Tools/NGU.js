@@ -219,13 +219,31 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.getElementById("genNGUinput").value += inputString;
 	}
 	
+	function removeNguInput(inputString) {
+		var nguInput = document.getElementById("genNGUinput").value;
+		var inputSplit = nguInput.split(inputString);
+		document.getElementById("genNGUinput").value = "";
+		for(var index = 0; index < inputSplit.length; index++) {
+			document.getElementById("genNGUinput").value += inputSplit[index];
+		}
+	}
+	
 	var itemListDiv = document.getElementById("items");
 	itemList.map(function(item) {
 		var itemImg = img();
 		itemImg.src = item.img;
 		itemImg.alt = item.name;
+		itemImg.isActive = false;
 		itemImg.onclick = function() {
-			appendNguInput(itemInputString);
+			if(!itemImg.isActive) {
+				appendNguInput(itemInputString);
+				itemImg.className = "greyOut";
+				itemImg.isActive = true;
+			} else if(itemImg.isActive) {
+				removeNguInput(itemInputString);
+				itemImg.className = "";
+				itemImg.isActive = false;
+			}
 		};
 		var itemInputString = "\n" + item.name + "," + item.type + "," + item.eCap + "," + item.mCap + "," + item.ePow + "," + item.mPow + "," + item.ngu + ";";
 		itemListDiv.appendChild(itemImg);

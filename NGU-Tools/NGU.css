@@ -1,3 +1,7 @@
 td {
   vertical-align: top;
 }
+
+.greyOut {
+	opacity: 0.4;
+}

@@ -1216,7 +1216,6 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/c/c5/241_-_S
 itemList.push(item);
 
 var item = new CreateItem('An Ordinary Calculator', Slot.ACCESSORY);
-
 item.ngu = 600;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/6/6f/242_-_An_Ordinary_Calculator.png/revision/latest?cb=20181208020919';
 
@@ -1245,8 +1244,6 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/4/47/245_-_T
 itemList.push(item);
 
 var item = new CreateItem('Anime Bodypillow', Slot.ACCESSORY);
-item.ePow = 20000;
-item.mPow = 20000;
 item.ngu = 300;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/4/4f/246_-_Anime_Bodypillow.png/revision/latest?cb=20190404221520';
 
@@ -1254,7 +1251,6 @@ itemList.push(item);
 
 var item = new CreateItem('Red Meeple Thingy', Slot.ACCESSORY);
 item.mPow = 24000;
-item.mCap = 2000;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/c/ca/247_-_Red_Meeple_Thingy.png/revision/latest?cb=20190127224512';
 
 itemList.push(item);
@@ -1267,8 +1263,6 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/16/248_-_A
 itemList.push(item);
 
 var item = new CreateItem('Heart Shaped Panties', Slot.ACCESSORY);
-item.ePow = 13333;
-item.mPow = 13333;
 item.ngu = 666;
 item.mCap = 1333;
 item.eCap = 1333;
@@ -1292,7 +1286,6 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/6/68/252_-_N
 itemList.push(item);
 
 var item = new CreateItem('Numerical Legs', Slot.PANTS);
-item.ePow = 22000;
 item.eCap = 1800;
 item.mCap = 1800;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/0/00/253_-_Numerical_Legs.png/revision/latest?cb=20190404232945';
@@ -1314,15 +1307,15 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/d/de/255_-_T
 
 itemList.push(item);
 
-var item = new CreateItem('69 Charm', Slot.ACCESSORY);
-item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/4/46/257_-_69_Charm.png/revision/latest?cb=20190405135754';
-
-itemList.push(item);
-
 var item = new CreateItem('Infinity Charm', Slot.ACCESSORY);
 item.eCap = 1777.78;
 item.mCap = 1777.78;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/4/4b/256_-_Infinity_Charm.png/revision/latest?cb=20190405131142';
+
+itemList.push(item);
+
+var item = new CreateItem('69 Charm', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/4/46/257_-_69_Charm.png/revision/latest?cb=20190405135754';
 
 itemList.push(item);
 
@@ -1352,7 +1345,7 @@ itemList.push(item);
 var item = new CreateItem('Pizza Boots', Slot.BOOTS);
 item.eCap = 2400;
 item.mCap = 2400;
-item.mPow = 20000;
+item.ePow = 20000;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/11/261_-_Pizza_Boots.png/revision/latest?cb=20190210184753';
 
 itemList.push(item);
@@ -1430,15 +1423,11 @@ itemList.push(item);
 var item = new CreateItem('Brass Knuckles', Slot.ACCESSORY);
 item.eCap = 1800;
 item.mCap = 1800;
-item.ePow = 20000;
-item.mPow = 20000;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/7/71/271_-_Brass_Knuckles.png/revision/latest?cb=20190304210708';
 
 itemList.push(item);
 
 var item = new CreateItem('Violin Case', Slot.ACCESSORY);
-item.ePow = 26000;
-item.mPow = 26000;
 item.eCap = 2600;
 item.mCap = 2600;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/e/e8/272_-_Violin_Case.png/revision/latest?cb=20190405170845';
@@ -1466,7 +1455,6 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/6/6c/275_-_T
 itemList.push(item);
 
 var item = new CreateItem('Left Fairy Wing', Slot.ACCESSORY);
-item.ePow = 66000;
 item.eCap = 6600;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/e/e4/276_-_Left_Fairy_Wing.png/revision/latest?cb=20190405170949';
 

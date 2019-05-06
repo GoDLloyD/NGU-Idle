@@ -124,11 +124,6 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/2/24/297_-_M
 
 itemList.push(item);
 
-var item = new CreateItem('Crappy Helmet', Slot.HEAD);
-item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/2/28/40_-_Crappy_Helmet.png/revision/latest?cb=20180330165208';
-
-itemList.push(item);
-
 var item = new CreateItem('Cloth Hat', Slot.HEAD);
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/8/86/62_-_Cloth_Hat.png/revision/latest?cb=20180330170954';
 
@@ -151,6 +146,11 @@ itemList.push(item);
 
 var item = new CreateItem('A Stick', Slot.WEAPON);
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/f/f6/75_-_A_Stick.png/revision/latest?cb=20180330172932';
+
+itemList.push(item);
+
+var item = new CreateItem('Crappy Helmet', Slot.HEAD);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/2/28/40_-_Crappy_Helmet.png/revision/latest?cb=20180330165208';
 
 itemList.push(item);
 

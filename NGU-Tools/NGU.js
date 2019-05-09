@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	function td() { return el("TD", arr(arguments)); }
 	function th() { return el("TH", arr(arguments)); }
 	
-	function EquipItem(name, type) {
-		var equipItem = EquipItem(type);
+	function createEquipItem(name, type) {
+		var equipItem = new EquipItem(type);
 		equipItem.name = name;
 		return equipItem;
 	}
@@ -86,11 +86,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		var generationText = document.getElementById("genNGUinput").value;
 		var generationTextParts = generationText.split(";");
 		var equipParts = [];
-		var equipHeads = [EquipItem("empty", "Head")];
-		var equipChests = [EquipItem("empty", "Chest")];
-		var equipLegs = [EquipItem("empty", "Legs")];
-		var equipBoots = [EquipItem("empty", "Boots")];
-		var equipWeapons = [EquipItem("empty", "Weapon")];
+		var equipHeads = [createEquipItem("empty", "Head")];
+		var equipChests = [createEquipItem("empty", "Chest")];
+		var equipLegs = [createEquipItem("empty", "Legs")];
+		var equipBoots = [createEquipItem("empty", "Boots")];
+		var equipWeapons = [createEquipItem("empty", "Weapon")];
 		var equipAccessories = [];
 		
 		generationTextParts.map(function(generationTextPart) {

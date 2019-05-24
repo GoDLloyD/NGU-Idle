@@ -1130,12 +1130,12 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/a/a5/217_-_E
 
 itemList.push(item);
 
-var item = new CreateItem('A Cheap Plastik Amulet', Slot.ACCESSORY);
+var item = new CreateItem('A Cheap Plastic Amulet', Slot.ACCESSORY);
 item.ePow = 9000;
 item.eCap = 720;
 item.mPow = 9000;
 item.mCap = 720;
-item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/8/83/218_-_A_Cheap_Plastik_Amulet.png/revision/latest?cb=20181203104051';
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/16/218_-_A_Cheap_Plastic_Amulet.png/revision/latest?cb=20181203104051';
 
 itemList.push(item);
 

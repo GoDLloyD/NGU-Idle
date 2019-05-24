@@ -1479,3 +1479,236 @@ item.mCap = 6600;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/6/66/277_-_Right_Fairy_Wing.png/revision/latest?cb=20190405171006';
 
 itemList.push(item);
+
+var item = new CreateItem('Hamlet', Slot.HEAD);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/9/9f/301_-_Hamlet.png/revision/latest?cb=20190516192018';
+
+itemList.push(item);
+
+var item = new CreateItem('Chess Plate', Slot.CHEST);
+item.ePow = 58000;
+item.mPow = 58000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/8/85/302_-_Chess_Plate.png/revision/latest?cb=20190516192029';
+
+itemList.push(item);
+
+var item = new CreateItem('Logs', Slot.LEGS);
+item.eCap = 7000;
+item.mCap = 7000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/0/06/303_-_Logs.png/revision/latest?cb=20190516192037';
+
+itemList.push(item);
+
+var item = new CreateItem('Booms', Slot.BOOTS);
+item.ePow = 70000;
+item.mPow = 70000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/2/2c/304_-_Booms.png/revision/latest?cb=20190516192054';
+
+itemList.push(item);
+
+var item = new CreateItem('Wee pin', Slot.WEAPON);
+item.ePow = 50000;
+item.mPow = 50000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/7/7f/305_-_Wee_pin.png/revision/latest?cb=20190516192103';
+
+itemList.push(item);
+
+var item = new CreateItem('The Ass-cessory', Slot.ACCESSORY);
+item.eCap = 6600;
+item.mCap = 6600;
+item.ePow = 66000;
+item.mPow = 66000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/1a/306_-_The_Ass-cessory.png/revision/latest?cb=20190516192112';
+
+itemList.push(item);
+
+var item = new CreateItem('Eye of ELXU', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/0/05/307_-_Eye_of_ELXU.png/revision/latest?cb=20190516192121';
+
+itemList.push(item);
+
+var item = new CreateItem('Spinning Tophat', Slot.HEAD);
+item.ePow = 122000;
+item.mPow = 122000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/b/b8/308_-_Spinning_Tophat.png/revision/latest?cb=20190516192131';
+
+itemList.push(item);
+
+var item = new CreateItem('Demonic Flurbie Chestplate', Slot.CHEST);
+item.eCap = 13200;
+item.mCap = 13200;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/e/e3/309_-_Demonic_Flurbie_Chestplate.png/revision/latest?cb=20190516192140';
+
+itemList.push(item);
+
+var item = new CreateItem('AAA Battery Legs', Slot.LEGS);
+item.ePow = 114000;
+item.mPow = 114000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/8/88/310_-_AAA_Battery_Legs.png/revision/latest?cb=20190516192149';
+
+itemList.push(item);
+
+var item = new CreateItem('Slinky Boots', Slot.BOOTS);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/3/34/311_-_Slinky_Boots.png/revision/latest?cb=20190516192158';
+
+itemList.push(item);
+
+var item = new CreateItem('THE MALF SLAMMER', Slot.WEAPON);
+item.ePow = 124000;
+item.mPow = 124000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/18/312_-_THE_MALF_SLAMMER.png/revision/latest?cb=20190516192621';
+
+itemList.push(item);
+
+var item = new CreateItem('Rare Foil Pokeyman Card', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/3/3a/313_-_Rare_Foil_Pokeyman_Card.png/revision/latest?cb=20190516192629';
+
+itemList.push(item);
+
+var item = new CreateItem('A handful of Krazy Bonez', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/f/f6/314_-_A_handful_of_Krazy_Bonez.png/revision/latest?cb=20190516192651';
+
+itemList.push(item);
+
+var item = new CreateItem('Buster Sword Top', Slot.HEAD);
+item.ePow = 170000;
+item.mPow = 170000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/0/04/315_-_Buster_Sword_Top.png/revision/latest?cb=20190517012207';
+
+itemList.push(item);
+
+var item = new CreateItem('Buster Sword Upper', Slot.CHEST);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/3/3e/316_-_Buster_Sword_Upper.png/revision/latest?cb=20190517012319';
+
+itemList.push(item);
+
+var item = new CreateItem('Buster Sword Lower', Slot.LEGS);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/7/76/317_-_Buster_Sword_Lower.png/revision/latest?cb=20190517012401';
+
+itemList.push(item);
+
+var item = new CreateItem('Buster Sword Bottom', Slot.BOOTS);
+item.eCap = 18800;
+item.mCap = 18800;
+item.ePow = 178000;
+item.mPow = 178000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/3/33/318_-_Buster_Sword_Bottom.png/revision/latest?cb=20190517012420';
+
+itemList.push(item);
+
+var item = new CreateItem('Gift Shop Buster Sword Replica', Slot.WEAPON);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/8/85/319_-_Gift_Shop_Buster_Sword_Replica.png/revision/latest?cb=20190517012441';
+
+itemList.push(item);
+
+var item = new CreateItem('A Gigantic Zipper', Slot.ACCESSORY);
+item.ePow = 176000;
+item.mPow = 176000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/1/11/320_-_A_Gigantic_Zipper.png/revision/latest?cb=20190517012459';
+
+itemList.push(item);
+
+var item = new CreateItem('Anime Hero Wig', Slot.ACCESSORY);
+item.ePow = 192000;
+item.mPow = 192000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/0/00/321_-_Anime_Hero_Wig.png/revision/latest?cb=20190517012515';
+
+itemList.push(item);
+
+var item = new CreateItem('Hat of Greed', Slot.HEAD);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/e/ea/322_-_Hat_of_Greed.png/revision/latest?cb=20190517012534';
+
+itemList.push(item);
+
+var item = new CreateItem('Blue Eyes White Chestplate', Slot.CHEST);
+item.eCap = 23200;
+item.mCap = 23200;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/b/b6/323_-_Blue_Eyes_White_Chestplate.png/revision/latest?cb=20190517012552';
+
+itemList.push(item);
+
+var item = new CreateItem('Trap Pants', Slot.LEGS);
+item.ePow = 240000;
+item.mPow = 240000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/d/d6/324_-_Trap_Pants.png/revision/latest?cb=20190517012609';
+
+itemList.push(item);
+
+var item = new CreateItem('All the other Titans\' Missing Shoes', Slot.BOOTS);
+item.eCap = 23200;
+item.mCap = 23200;
+item.ePow = 236000;
+item.mPow = 236000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/b/b6/325_-_All_the_other_Titans%27_Missing_Shoes.png/revision/latest?cb=20190517012908';
+
+itemList.push(item);
+
+var item = new CreateItem('The Disk of Dueling', Slot.WEAPON);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/e/e5/326_-_The_Disk_of_Dueling.png/revision/latest?cb=20190517012941';
+
+itemList.push(item);
+
+var item = new CreateItem('The Joker', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/e/ea/327_-_The_Joker.png/revision/latest?cb=20190517012952';
+
+itemList.push(item);
+
+var item = new CreateItem('Antlers of the Exile', Slot.ACCESSORY);
+item.eCap = 24000;
+item.mCap = 24000;
+item.ePow = 200000;
+item.mPow = 200000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/f/f8/328_-_Antlers_of_the_Exile.png/revision/latest?cb=20190517013006';
+
+itemList.push(item);
+
+var item = new CreateItem('The Credit Card', Slot.ACCESSORY);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/a/a9/329_-_The_Credit_Card.png/revision/latest?cb=20190517013029';
+
+itemList.push(item);
+
+var item = new CreateItem('Tentacle of the Exile', Slot.ACCESSORY);
+item.ePow = 380000;
+item.mPow = 380000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/c/cf/330_-_Tentacle_of_the_Exile.png/revision/latest?cb=20190517013043';
+
+itemList.push(item);
+
+var item = new CreateItem('The Skip Card', Slot.ACCESSORY);
+item.ePow = 56000;
+item.mPow = 56000;
+item.ngu = 500;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/0/03/331_-_The_Skip_Card.png/revision/latest?cb=20190517013059';
+
+itemList.push(item);
+
+var item = new CreateItem('Antennae of the Exile', Slot.ACCESSORY);
+item.eCap = 52000;
+item.mCap = 52000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/9/93/332_-_Antennae_of_the_Exile.png/revision/latest?cb=20190517013114';
+
+itemList.push(item);
+
+var item = new CreateItem('The Black Lotus', Slot.ACCESSORY);
+item.eCap = 80000;
+item.mCap = 80000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/c/cc/333_-_The_Black_Lotus.png/revision/latest?cb=20190517013127';
+
+itemList.push(item);
+
+var item = new CreateItem('Buster of the Exile', Slot.ACCESSORY);
+item.ePow = 800000;
+item.mPow = 800000;
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/9/9a/334_-_Buster_of_the_Exile.png/revision/latest?cb=20190517013140';
+
+itemList.push(item);
+
+var item = new CreateItem('Seal of the Exile', Slot.WEAPON);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/5/59/335_-_Seal_of_the_Exile.png/revision/latest?cb=20190523160203';
+
+itemList.push(item);
+
+var item = new CreateItem('Blue Eyes Ultimate Chestplate', Slot.CHEST);
+item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/c/c7/342_-_Blue_Eyes_Ultimate_Chestplate.png/revision/latest?cb=20190517013157';
+
+itemList.push(item);

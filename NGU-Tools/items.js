@@ -533,7 +533,7 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/a/a9/118_-_S
 itemList.push(item);
 
 var item = new CreateItem('A Regular Tie', Slot.ACCESSORY);
-item.mPow = 216.24;
+item.mPow = 216.4;
 item.ngu = 120;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/f/f5/116_-_A_Regular_Tie.png/revision/latest?cb=20180420182645';
 

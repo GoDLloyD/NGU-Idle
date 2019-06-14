@@ -1235,8 +1235,8 @@ item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/6/6f/242_-_A
 itemList.push(item);
 
 var item = new CreateItem('Anime Figurine', Slot.ACCESSORY);
-item.ePow = 13000;
-item.mPow = 13000;
+item.ePow = 16000;
+item.mPow = 16000;
 item.mCap = 1000;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/f/f4/243_-_Anime_Figurine.png/revision/latest?cb=20181208020927';
 
@@ -1244,14 +1244,14 @@ itemList.push(item);
 
 var item = new CreateItem('The D20', Slot.ACCESSORY);
 item.eCap = 1600;
-item.ePow = 16000;
+item.ePow = 18000;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/6/6a/244_-_The_D20.png/revision/latest?cb=20190404220153';
 
 itemList.push(item);
 
 var item = new CreateItem('The D8', Slot.ACCESSORY);
 item.mCap = 1600;
-item.mPow = 16000;
+item.mPow = 18000;
 item.img = 'https://vignette.wikia.nocookie.net/nguadventure/images/4/47/245_-_The_D8.png/revision/latest/scale-to-width-down/50?cb=20190404220657';
 
 itemList.push(item);
